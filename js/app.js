@@ -194,10 +194,7 @@ function revealMoodTrainer() {
   const vs = document.getElementById('video-section');
   if (vs) {
     vs.classList.remove('hidden');
-    setTimeout(() => {
-      initFadeIn();
-      vs.querySelector('.incident-intro')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    setTimeout(initFadeIn, 50);
   }
   document.getElementById('exb-next').style.display = 'none';
 }
@@ -359,8 +356,6 @@ function answerVideo(btn, stepIdx, answer) {
 function nextVideoStep() {
   videoStep++;
   showVideoStep(videoStep);
-  const active = document.querySelector('.video-quiz-step.active') || document.querySelector('#video-quiz-done .video-quiz-insight');
-  if (active) setTimeout(() => active.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
 }
 
 /* ═══════════════════════════════════════════════
