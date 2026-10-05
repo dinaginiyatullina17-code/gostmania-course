@@ -192,7 +192,13 @@ function revealExB() {
 /* Показать видеотренажёр (после упр. Б) */
 function revealMoodTrainer() {
   const vs = document.getElementById('video-section');
-  if (vs) { vs.classList.remove('hidden'); setTimeout(initFadeIn, 50); vs.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  if (vs) {
+    vs.classList.remove('hidden');
+    setTimeout(() => {
+      initFadeIn();
+      vs.querySelector('.incident-intro')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
   document.getElementById('exb-next').style.display = 'none';
 }
 
@@ -354,7 +360,7 @@ function nextVideoStep() {
   videoStep++;
   showVideoStep(videoStep);
   const active = document.querySelector('.video-quiz-step.active') || document.querySelector('#video-quiz-done .video-quiz-insight');
-  if (active) active.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (active) setTimeout(() => active.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
 }
 
 /* ═══════════════════════════════════════════════

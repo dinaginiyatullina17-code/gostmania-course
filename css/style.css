@@ -111,6 +111,7 @@ h1, h2, h3, h4, h5 {
 #page-block3 .incident-transition__steps li:nth-child(3) span { background: #A9D18E; }
 #page-block3 .incident-transition__next { margin: 18px 0 0; padding: 16px 18px; border-radius: 14px; background: #ffffff18; color: white; font-size: 16px; line-height: 1.55; }
 #page-block3 .video-quiz-insight { clear: both; margin: 24px 0 28px; padding: 18px 22px; border-radius: 16px; border-left: 6px solid #198737; background: #EAF2E2; color: #145D2A; font-size: 18px; font-weight: 700; line-height: 1.5; }
+#page-block3 .incident-intro, #page-block3 .video-quiz-insight { scroll-margin-top: 88px; }
 #page-block3 #video-quiz-done .marginal-note--float { margin-top: 0; }
 @media (max-width: 640px) {
   #page-block3 .incident-route__steps, #page-block3 .incident-examples { grid-template-columns: 1fr; }
