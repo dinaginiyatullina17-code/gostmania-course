@@ -185,7 +185,7 @@ function checkExA() {
 /* Показать упражнение Б */
 function revealExB() {
   const ex = document.getElementById('exercise-b');
-  if (ex) { ex.classList.remove('hidden'); ex.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  if (ex) ex.classList.remove('hidden');
   document.getElementById('exa-next').style.display = 'none';
 }
 
