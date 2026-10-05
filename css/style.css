@@ -23,6 +23,63 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
+/* ── Three steps and examples in the incident chapter ── */
+#page-block3 .incident-route {
+  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 24px;
+  background: #502314;
+  color: #F5EBDC;
+}
+#page-block3 .incident-route__eyebrow {
+  margin: 0 0 8px;
+  color: #FFAA00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+#page-block3 .incident-route h2 { margin: 0 0 24px; font-size: clamp(26px, 4vw, 36px); line-height: 1.1; }
+#page-block3 .incident-route__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#page-block3 .incident-route__steps li { display: flex; flex-direction: column; gap: 10px; }
+#page-block3 .incident-route__number {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFAA00;
+  color: #502314;
+  font-family: 'Flame', sans-serif;
+  font-size: 32px;
+}
+#page-block3 .incident-route__steps li:nth-child(2) .incident-route__number { background: #FF8732; }
+#page-block3 .incident-route__steps li:nth-child(3) .incident-route__number { background: #D7E8C5; }
+#page-block3 .incident-route__steps strong { font-family: 'Flame', sans-serif; font-size: 22px; line-height: 1.15; }
+#page-block3 .incident-route__steps li > span:last-child { font-size: 14px; line-height: 1.4; }
+#page-block3 .incident-examples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+#page-block3 .incident-example { display: flex; flex-direction: column; padding: 22px 18px; border-radius: 20px; background: #FFF1CE; border-top: 5px solid #FFAA00; }
+#page-block3 .incident-example:nth-child(2) { background: #FFE6D3; border-color: #FF8732; }
+#page-block3 .incident-example:nth-child(3) { background: #EAF2E2; border-color: #198737; }
+#page-block3 .incident-example__icon { font-size: 30px; line-height: 1; }
+#page-block3 .incident-example h3 { margin: 14px 0 20px; font-size: 22px; line-height: 1.15; }
+#page-block3 .incident-example__label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+#page-block3 .incident-example blockquote { margin: 10px 0 20px; font-size: 15px; line-height: 1.55; }
+#page-block3 .incident-example__action { margin-top: auto; padding-top: 12px; border-top: 1px solid #50231430; font-size: 13px; font-weight: 700; }
+@media (max-width: 640px) {
+  #page-block3 .incident-route { padding: 24px 20px; }
+  #page-block3 .incident-route__steps, #page-block3 .incident-examples { grid-template-columns: 1fr; }
+  #page-block3 .incident-route__steps li { display: grid; grid-template-columns: 52px 1fr; column-gap: 14px; row-gap: 4px; }
+  #page-block3 .incident-route__number { grid-row: span 2; }
+}
+
 /* ── Pages ── */
 .page { display: none; min-height: 100vh; }
 .page.active { display: block; }
