@@ -326,7 +326,12 @@ function showVideoStep(n) {
   document.querySelectorAll('.video-quiz-step').forEach((el, i) => el.classList.toggle('active', i === n));
   if (n >= 3) {
     const done = document.getElementById('video-quiz-done');
-    if (done) done.classList.remove('hidden');
+    if (done) {
+      done.classList.remove('hidden');
+      // The results start hidden, so their fade-in elements were not observed
+      // when the video trainer first opened. Reveal them with the results.
+      done.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+    }
   }
 }
 function answerVideo(btn, stepIdx, answer) {
@@ -348,7 +353,7 @@ function answerVideo(btn, stepIdx, answer) {
 function nextVideoStep() {
   videoStep++;
   showVideoStep(videoStep);
-  const active = document.querySelector('.video-quiz-step.active') || document.getElementById('video-quiz-done');
+  const active = document.querySelector('.video-quiz-step.active') || document.querySelector('#video-quiz-done .video-quiz-insight');
   if (active) active.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
