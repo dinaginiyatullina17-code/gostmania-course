@@ -631,7 +631,7 @@ function closeDoproModal() {
 
 // Закрытие по Esc
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeDoproModal(); closeImageZoom(); }
+  if (e.key === 'Escape') { closeDoproModal(); closeImageZoom(); closeIncidentZoom(); }
 });
 
 /* ═══════════════════════════════════════════════
@@ -663,6 +663,31 @@ function openImageZoom(src, alt) {
 }
 function closeImageZoom() {
   document.getElementById('image-zoom-overlay')?.classList.remove('open');
+}
+
+let incidentZoomTrigger = null;
+function openIncidentZoom(level) {
+  const card = document.querySelector(`#page-block3 .incident-card--l${level}`);
+  const overlay = document.getElementById('incident-zoom-overlay');
+  const content = document.getElementById('incident-zoom-content');
+  if (!card || !overlay || !content) return;
+  incidentZoomTrigger = document.activeElement;
+  const enlarged = card.cloneNode(true);
+  enlarged.classList.add('incident-card--zoomed');
+  content.replaceChildren(enlarged);
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  overlay.querySelector('.incident-zoom-close')?.focus();
+}
+
+function closeIncidentZoom() {
+  const overlay = document.getElementById('incident-zoom-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.getElementById('incident-zoom-content')?.replaceChildren();
+  incidentZoomTrigger?.focus();
+  incidentZoomTrigger = null;
 }
 
 /* ═══════════════════════════════════════════════

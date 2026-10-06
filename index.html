@@ -17,7 +17,7 @@
       }}}
     }
   </script>
-  <link rel="stylesheet" href="css/style.css?v=2b309e3">
+  <link rel="stylesheet" href="css/style.css?v=incident-zoom-1">
 </head>
 <body>
 
@@ -681,6 +681,7 @@
             <div class="incident-card__header">
               <span class="incident-card__num">УРОВЕНЬ 1</span>
               <span class="incident-card__sub">Простой</span>
+              <button class="incident-card__zoom" type="button" onclick="openIncidentZoom(1)" aria-label="Увеличить карточку уровня 1">⤢ Увеличить</button>
             </div>
             <div class="incident-card__body">
               <div class="incident-card__icons">
@@ -708,6 +709,7 @@
             <div class="incident-card__header">
               <span class="incident-card__num">УРОВЕНЬ 2</span>
               <span class="incident-card__sub">Сложный</span>
+              <button class="incident-card__zoom" type="button" onclick="openIncidentZoom(2)" aria-label="Увеличить карточку уровня 2">⤢ Увеличить</button>
             </div>
             <div class="incident-card__body">
               <div class="incident-card__icons">
@@ -735,6 +737,7 @@
             <div class="incident-card__header">
               <span class="incident-card__num">УРОВЕНЬ 3</span>
               <span class="incident-card__sub">Критический</span>
+              <button class="incident-card__zoom" type="button" onclick="openIncidentZoom(3)" aria-label="Увеличить карточку уровня 3">⤢ Увеличить</button>
             </div>
             <div class="incident-card__body">
               <div class="incident-card__icons">
@@ -1514,11 +1517,19 @@
 </div>
 
 <!-- Модальное окно увеличения изображения -->
+<div id="incident-zoom-overlay" class="incident-zoom-overlay" onclick="closeIncidentZoom()" aria-hidden="true">
+  <div class="incident-zoom-dialog" role="dialog" aria-modal="true" aria-label="Увеличенная карточка уровня инцидента" onclick="event.stopPropagation()" tabindex="-1">
+    <button class="incident-zoom-close" type="button" aria-label="Закрыть" onclick="closeIncidentZoom()">✕</button>
+    <div id="incident-zoom-content"></div>
+  </div>
+</div>
+
+<!-- Модальное окно увеличения изображения -->
 <div id="image-zoom-overlay" class="image-zoom-overlay" onclick="closeImageZoom()">
   <button class="image-zoom__close" type="button" aria-label="Закрыть" onclick="closeImageZoom()">✕</button>
   <img id="image-zoom-img" class="image-zoom__img" src="" alt="" onclick="event.stopPropagation()">
 </div>
 
-<script src="js/app.js"></script>
+<script src="js/app.js?v=incident-zoom-1"></script>
 </body>
 </html>

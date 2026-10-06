@@ -1566,6 +1566,26 @@ h1, h2, h3, h4, h5 {
   color: rgba(255,255,255,0.85);
 }
 
+.incident-card__zoom { margin-left: auto; padding: 7px 11px; border: 1px solid rgba(255,255,255,.7); border-radius: 10px; background: rgba(255,255,255,.14); color: white; font: 600 12px 'Roboto',sans-serif; white-space: nowrap; cursor: zoom-in; }
+.incident-card__zoom:hover { background: rgba(255,255,255,.28); }
+.incident-zoom-overlay { display: none; position: fixed; inset: 0; z-index: 10020; align-items: center; justify-content: center; padding: 28px; overflow-y: auto; background: rgba(35,18,10,.78); }
+.incident-zoom-overlay.open { display: flex; }
+.incident-zoom-dialog { position: relative; width: min(920px,96vw); max-height: 94vh; overflow: auto; padding: 54px 22px 22px; border-radius: 22px; background: #fff; box-shadow: 0 20px 70px rgba(0,0,0,.3); }
+.incident-zoom-close { position: absolute; top: 12px; right: 14px; z-index: 2; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #F5EBDC; color: #502314; font-size: 19px; cursor: pointer; }
+.incident-zoom-dialog .incident-card { width: 100%; }
+.incident-zoom-dialog .incident-card__header { min-height: 76px; padding: 18px 24px; align-items: center; }
+.incident-zoom-dialog .incident-card__num { font-size: 38px; }
+.incident-zoom-dialog .incident-card__sub { font-size: 19px; }
+.incident-zoom-dialog .incident-card__zoom { display: none; }
+.incident-zoom-dialog .incident-card__body { grid-template-columns: 210px 2px minmax(0,1fr); gap: 22px; padding: 28px; }
+.incident-zoom-dialog .incident-card__icons { width: 210px; min-width: 210px; }
+.incident-zoom-dialog .incident-card__icons > .inc-emoji,
+.incident-zoom-dialog .incident-card__combo .inc-emoji,
+.incident-zoom-dialog .incident-card__option > .inc-emoji { flex-basis: 46px; width: 46px; height: 46px; font-size: 32px; }
+.incident-zoom-dialog .incident-card__option { min-height: 52px; }
+.incident-zoom-dialog .incident-card__info p:not(.incident-label) { font-size: 18px; }
+.incident-zoom-dialog .incident-label { font-size: 17px; }
+
 .incident-card__body {
   background: #fff;
   padding: 18px 20px;
@@ -1669,6 +1689,17 @@ h1, h2, h3, h4, h5 {
 .incident-arrow--l3 { color: #D62300; }
 
 @media (max-width: 640px) {
+  .incident-card__header { flex-wrap: wrap; }
+  .incident-zoom-overlay { padding: 12px; }
+  .incident-zoom-dialog { width: 100%; max-height: 96vh; padding: 52px 12px 14px; }
+  .incident-zoom-dialog .incident-card__header { min-height: 0; padding: 14px; }
+  .incident-zoom-dialog .incident-card__num { font-size: 27px; }
+  .incident-zoom-dialog .incident-card__body { grid-template-columns: 110px 2px minmax(0,1fr); gap: 10px; padding: 16px 12px; }
+  .incident-zoom-dialog .incident-card__icons { width: 110px; min-width: 110px; }
+  .incident-zoom-dialog .incident-card__icons > .inc-emoji,
+  .incident-zoom-dialog .incident-card__combo .inc-emoji,
+  .incident-zoom-dialog .incident-card__option > .inc-emoji { flex-basis: 36px; width: 36px; height: 36px; font-size: 24px; }
+  .incident-zoom-dialog .incident-card__info p:not(.incident-label) { font-size: 15px; }
   .incident-card__body { grid-template-columns: 110px 2px minmax(0, 1fr); gap: 10px; padding: 16px 12px; }
   .incident-card__icons { width: 110px; min-width: 110px; min-height: 132px; }
   .incident-card--l3 .incident-card__icons { flex-wrap: wrap; align-content: center; }
