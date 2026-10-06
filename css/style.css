@@ -1569,14 +1569,15 @@ h1, h2, h3, h4, h5 {
 .incident-card__body {
   background: #fff;
   padding: 18px 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 170px 2px minmax(0, 1fr);
   align-items: center;
   gap: 16px;
 }
 
 .incident-card__icons {
   display: flex;
-  flex: 0 0 170px;
+  flex: none;
   width: 170px;
   min-width: 170px;
   gap: 6px;
@@ -1601,8 +1602,8 @@ h1, h2, h3, h4, h5 {
 .incident-card__divider {
   width: 2px;
   min-height: 72px;
+  height: 100%;
   align-self: stretch;
-  flex-shrink: 0;
   border-radius: 2px;
   opacity: 0.22;
 }
@@ -1653,8 +1654,8 @@ h1, h2, h3, h4, h5 {
 .incident-arrow--l3 { color: #D62300; }
 
 @media (max-width: 640px) {
-  .incident-card__body { gap: 10px; padding: 16px 12px; }
-  .incident-card__icons { flex-basis: 110px; width: 110px; min-width: 110px; }
+  .incident-card__body { grid-template-columns: 110px 2px minmax(0, 1fr); gap: 10px; padding: 16px 12px; }
+  .incident-card__icons { width: 110px; min-width: 110px; }
   .incident-card--l3 .incident-card__icons .inc-emoji { font-size: 23px; }
   .incident-card__divider { margin-right: 0; }
 }
