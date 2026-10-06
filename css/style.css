@@ -1582,6 +1582,9 @@ h1, h2, h3, h4, h5 {
 
 .incident-card__combo { display: inline-flex; align-items: center; gap: 2px; }
 .incident-card__operator { font-size: 12px; font-weight: 700; color: #502314; white-space: nowrap; }
+.incident-card--l2 .incident-card__icons { align-items: flex-start; flex-direction: column; gap: 2px; }
+.incident-card__option { display: flex; align-items: center; gap: 8px; min-height: 40px; }
+.incident-card__option .inc-emoji { font-size: 30px; }
 
 .inc-icon {
   width: 46px;
