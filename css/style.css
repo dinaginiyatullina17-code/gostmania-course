@@ -1533,8 +1533,9 @@ h1, h2, h3, h4, h5 {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  max-width: 480px;
-  margin: 0 auto;
+  max-width: 580px;
+  width: 100%;
+  margin: 0;
 }
 
 .incident-card {
@@ -1585,10 +1586,9 @@ h1, h2, h3, h4, h5 {
 .incident-card--l2 .incident-card__icons { align-items: flex-start; flex-direction: column; gap: 2px; }
 .incident-card__option { display: flex; align-items: center; gap: 8px; min-height: 40px; }
 .incident-card__option .inc-emoji { font-size: 30px; }
-.incident-card--l2 .incident-card__option:last-child { justify-content: center; width: 100%; }
+.incident-card--l2 .incident-card__option:last-child { justify-content: flex-start; width: 100%; }
 .incident-card--l3 .incident-card__icons { justify-content: center; gap: 5px; }
 .incident-card--l3 .incident-card__icons .inc-emoji { font-size: 31px; }
-.incident-card--l3 .incident-card__operator { font-size: 16px; color: #D62300; }
 
 .inc-icon {
   width: 46px;
