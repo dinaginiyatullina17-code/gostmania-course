@@ -454,7 +454,7 @@
       <p style="font-size:14px;margin:0 0 14px;opacity:0.7;">Перетащи каждую фразу туда, где ей место</p>
       <div class="zone-pool" id="exa-pool">
         <div class="drag-chip drag-chip--text" id="exa1" data-key="help1">«Вы правы, это долго! Сейчас проверю ваш заказ, он будет готов вне очереди»</div>
-        <div class="drag-chip drag-chip--text" id="exa2" data-key="help2">«Примите, пожалуйста, наш комплемент — десерт, в качестве извинения за долгое ожидание»</div>
+        <div class="drag-chip drag-chip--text" id="exa2" data-key="help2">«Примите от нас десерт в качестве комплемента. Мы хотим, чтобы у Вас было хорошее настроение!»</div>
         <div class="drag-chip drag-chip--text" id="exa3" data-key="help3">«Спасибо Вам за обратную связь, вы помогаете нам становиться лучше!»</div>
         <div class="drag-chip drag-chip--text" id="exa4" data-key="bad1">«Понимаю, что вы долго ожидаете, сегодня у нас много заказов, повара не справляются»</div>
         <div class="drag-chip drag-chip--text" id="exa5" data-key="bad2">«Нам очень жаль, что Вы расстроены. Сейчас в ресторане большая очередь, нужно подождать ещё 5 минут»</div>
@@ -499,7 +499,7 @@
         </div>
         <div class="sort-item" data-idx="3" draggable="true">
           <span class="sort-handle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2 4h12v1.5H2zm0 3.5h12V9H2zm0 3.5h12V12.5H2z"/></svg></span>
-          Ваш заказ будет готов вне очереди. Примите, пожалуйста, наш комплемент — десерт, в качестве извинения
+          Ваш заказ будет готов вне очереди. Примите от нас десерт в качестве комплемента. Мы хотим, чтобы у Вас было хорошее настроение!
         </div>
         <div class="sort-item" data-idx="4" draggable="true">
           <span class="sort-handle"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2 4h12v1.5H2zm0 3.5h12V9H2zm0 3.5h12V12.5H2z"/></svg></span>
@@ -685,12 +685,13 @@
             <div class="incident-card__body">
               <div class="incident-card__icons">
                 <span class="inc-emoji">🥤</span>
+                <span class="incident-card__operator">или</span>
                 <span class="inc-emoji">🍰</span>
               </div>
               <div class="incident-card__divider"></div>
               <div class="incident-card__info">
                 <p class="incident-label">Примеры:</p>
-                <p>ожидание 4–8 мин, грязь, оплата, шумные Гости, проблема с получением заказа, сбои в МП</p>
+                <p>Гость спокойно сообщает о проблеме, готов выслушать решение</p>
                 <p class="incident-label">Действие:</p>
                 <p>Выясни проблему, извинись и реши на месте</p>
               </div>
@@ -710,16 +711,16 @@
             </div>
             <div class="incident-card__body">
               <div class="incident-card__icons">
-                <span class="inc-emoji">🥤</span>
-                <span class="inc-emoji">🍰</span>
-                <p>или</p>
-                <span class="inc-emoji">🥤</span>
-                <span class="inc-emoji">🍟</span>
+                <span class="incident-card__combo"><span class="inc-emoji">🥤</span><span class="incident-card__operator">+</span><span class="inc-emoji">🍰</span></span>
+                <span class="incident-card__operator">или</span>
+                <span class="incident-card__combo"><span class="inc-emoji">🥤</span><span class="incident-card__operator">+</span><span class="inc-emoji">🍟</span></span>
+                <span class="incident-card__operator">или</span>
+                <span class="inc-emoji">🍔</span>
               </div>
               <div class="incident-card__divider"></div>
               <div class="incident-card__info">
                 <p class="incident-label">Примеры:</p>
-                <p>ожидание &gt;8 мин, ошибка сборки, невкусно / холодно, сдача, отсутствие блюда в меню</p>
+                <p>Гость раздражён, торопится или недоволен сервисом; предложи решение, пока ситуация не накалилась</p>
                 <p class="incident-label">Действие:</p>
                 <p>Предложи решение самостоятельно. Если ситуация накаляется — зови менеджера</p>
               </div>
@@ -749,7 +750,7 @@
                 <p class="incident-label">Примеры:</p>
                 <p>агрессия, инородный предмет в еде, насекомые / грызуны, травма, жалоба на отравление, пропажа / порча имущества, грубость сотрудника</p>
                 <p class="incident-label">Действие:</p>
-                <p>Сразу позови менеджера. Дальнейшее решение и комплемент — с его участием; инцидент фиксируется в SD</p>
+                <p>При жалобах с юридическими рисками обязательно сразу позови АУП. Дальнейшее решение и комплемент — с его участием; инцидент зафиксируй в SD</p>
               </div>
             </div>
           </div>
